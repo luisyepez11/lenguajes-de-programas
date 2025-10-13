@@ -1,0 +1,32 @@
+{
+"lista": [
+{
+"id": "af4673ee-aab2-4816-a75b-7561bc6d71bb",
+"nombre": "Hacer el crud",
+"porcentaje": 25,
+"estado": "Proceso",
+"fecha_creacion": "2025-10-11T00:00:00-04:00"
+},
+{
+"id": "d296d0bc-9a5c-4ffc-836a-af190a554508",
+"nombre": "Aprender go",
+"porcentaje": 10,
+"estado": "Proceso",
+"fecha_creacion": "2025-10-11T00:00:00-04:00"
+},
+{
+"id": "720578f5-613d-4319-b050-bcea711fe5a3",
+"nombre": "Aprender pruebas unitarias",
+"porcentaje": 94.5,
+"estado": "Avanzado",
+"fecha_creacion": "2025-10-11T00:00:00-04:00"
+},
+{
+"id": "c2eea72b-869c-4c89-a721-bc14606121ae",
+"nombre": "prueba",
+"porcentaje": 0,
+"estado": "Incompleto",
+"fecha_creacion": "2025-10-13T00:00:00-04:00"
+}
+]
+}
