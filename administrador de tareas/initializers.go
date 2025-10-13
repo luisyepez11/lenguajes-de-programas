@@ -111,8 +111,8 @@ func (c *Cmd) inicia(interfaz Interfaz) {
 	//actualizar nombre
 	var cmdNombre = &cobra.Command{
 		Use:   "n [id] [nombre]",
-		Short: "Comando para borrar tareas",
-		Long:  "Comando para eliminar permanentemente un registro de una tarea",
+		Short: "Comando para actualizar el nombre de una tarea",
+		Long:  "Comando para actualizar el nombre de una tare",
 		Args:  cobra.MinimumNArgs(2),
 		Run: func(cmd *cobra.Command, args []string) {
 			interfaz.actualizarNombre(args[0], args[1])
@@ -121,8 +121,8 @@ func (c *Cmd) inicia(interfaz Interfaz) {
 	//actualizar estado
 	var cmdEstado = &cobra.Command{
 		Use:   "c",
-		Short: "Comando para borrar tareas",
-		Long:  "Comando para eliminar permanentemente un registro de una tarea",
+		Short: "Comando para completar una tarea",
+		Long:  "Comando para completar una tarea",
 		Args:  cobra.MinimumNArgs(1),
 		Run: func(cmd *cobra.Command, args []string) {
 			interfaz.completar(args[0])
@@ -131,8 +131,8 @@ func (c *Cmd) inicia(interfaz Interfaz) {
 	//actualizar porcentaje
 	var cmdPorcentaje = &cobra.Command{
 		Use:   "p [id] [porcentaje]",
-		Short: "Comando para borrar tareas",
-		Long:  "Comando para eliminar permanentemente un registro de una tarea",
+		Short: "Comando para actualizar el porcentaje de una tarea",
+		Long:  "Comando para actualizar el porcentaje de una tarea",
 		Args:  cobra.MinimumNArgs(2),
 		Run: func(cmd *cobra.Command, args []string) {
 			porsetaje, err := strconv.ParseFloat(args[1], 32)
@@ -156,3 +156,4 @@ func (c *Cmd) inicia(interfaz Interfaz) {
 	c.rootCmd.AddCommand(cmdInitiated)
 	c.rootCmd.Execute()
 }
+
