@@ -24,6 +24,14 @@ impl Interfaz {
   
         read::ver_tareas(&self.lista);
     }
+    pub fn ver_tareas_completadas(&self) {
+  
+        read::ver_tareas_completadas(&self.lista);
+    }
+    pub fn ver_tareas_no_iniciadas(&self) {
+  
+        read::ver_tareas_no_iniciadas(&self.lista);
+    }
     
     pub fn actualizar_tarea_nombre(&mut self, id: String, nombre: String) -> bool {
    

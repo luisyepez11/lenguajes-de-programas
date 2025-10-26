@@ -9,6 +9,29 @@ pub fn ver_tareas(lista: &Lista) {
         tarea.mostrar_tarea();
     }
 }
+
+pub fn ver_tareas_completadas(lista: &Lista) {
+    if lista.contenido.is_empty() {
+        println!("No hay tareas para mostrar.");
+        return;
+    }
+    for tarea in &lista.contenido {
+        if tarea.porcentaje == 100.00{
+            tarea.mostrar_tarea();
+        }
+    }
+}
+pub fn ver_tareas_no_iniciadas(lista: &Lista) {
+    if lista.contenido.is_empty() {
+        println!("No hay tareas para mostrar.");
+        return;
+    }
+    for tarea in &lista.contenido {
+        if tarea.porcentaje < 1.00{
+            tarea.mostrar_tarea();
+        }
+    }
+}
 #[cfg(test)]
 mod tests {
     use super::ver_tareas;

@@ -6,6 +6,13 @@
       "porcentaje": 100.0,
       "estado": "Completado",
       "creacion": "2025-10-24 16:34:42"
+    },
+    {
+      "id": "94ae5efad614a77a",
+      "nombre": "tarea2",
+      "porcentaje": 0.0,
+      "estado": "Incompleto",
+      "creacion": "2025-10-25 21:03:58"
     }
   ]
 }

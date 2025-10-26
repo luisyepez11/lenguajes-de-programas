@@ -31,6 +31,7 @@ impl Tarea {
     pub fn mostrar_tarea(&self){
         println!("-----------------------------------------------");
         println!("Nombre de la tarea : {}",self.nombre);
+        println!("Fecha de creacion : {}",self.creacion);
         println!("Su id es : {}",self.id);
         println!("Porcentaje completado:");
         let num = self.porcentaje * 2.0; 

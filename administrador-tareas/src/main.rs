@@ -29,6 +29,8 @@ enum Commands {
         creacion: String,
     },
     List,
+    ListComplit,
+    ListNotInit,
     Update {
         #[arg(short, long)]
         id: String,
@@ -41,7 +43,7 @@ enum Commands {
         #[arg(short, long)]
         id: String,
     },
-    filled{
+    Filled {
         #[arg(short, long)]
         id: String,
     }
@@ -73,6 +75,16 @@ fn main() {
             println!("--- Lista de Tareas ---");
             interfaz.ver_tareas();
         }
+
+        Commands::ListComplit => {
+            println!("--- Lista de Tareas Completadas ---");
+            interfaz.ver_tareas_completadas();
+        }
+
+        Commands::ListNotInit => {
+            println!("--- Lista de Tareas en Proceso---");
+            interfaz.ver_tareas_no_iniciadas();
+        }
         
         Commands::Update { id, nombre, porcentaje } => {
             println!("--- Actualizando Tarea {} ---", id);
@@ -98,7 +110,7 @@ fn main() {
             }
         }
 
-        Commands::filled { id} =>{
+        Commands::Filled { id} =>{
             println!("--- Completando Tarea {} ---", id);
             if interfaz.actualizar_tarea_porcentaje_completa(id.clone()){
                 cambios_realizados =true;
